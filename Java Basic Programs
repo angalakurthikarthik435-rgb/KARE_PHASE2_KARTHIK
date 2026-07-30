@@ -1,0 +1,60 @@
+class Main{
+   public static void main(String args[]) {
+        System.out.print("Hello World");
+   }
+}
+
+//i/p-> CSE "KARE" Students
+//o/p ->CSE "KARE" Students
+
+class Details{
+    public static void main(String args[]){
+        System.out.print("CSE \"kARE\" Students");
+    }
+}
+
+// i\p -> \n
+// o\p -> \n
+
+class Main{
+    public static void main(String args[]){
+        System.out.print("\\n");
+    }
+}
+
+// i\p               o\p
+//20                   20
+//10                   10
+
+import java.util.*;
+class Main{
+    public static void main(String args[]){
+    Scanner sc = new Scanner(System.in);
+    int a = sc.nextInt();
+    System.out.println(a);
+    }
+}
+
+//write a java program to get a float input from user and print it with two decimal points 
+import java.util.*;
+class Main{
+    public static void main(String args[]){
+        Scanner sc = new Scanner(System.in);
+        float f = sc.nextFloat();
+        System.out.printf("%.2f",f);
+    }
+}
+
+
+//write a java program to get a double input from user and print it
+import java.util.*;
+class Main{
+    public static void main(String args[]){
+        Scanner sc = new Scanner(System.in);
+        double d = sc.nextFloat();
+        System.out.print(d);
+    }
+}
+
+
+
