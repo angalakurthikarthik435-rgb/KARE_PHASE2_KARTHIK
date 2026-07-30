@@ -11,3 +11,32 @@ class Even{
     }
 }
 
+//write a java program to check whether two number are equal or not
+//i/p->3 3
+//o/p->3 AND 3 ARE EQUAL
+import java.util.*;
+class Even{
+    public static void main(String args[]){
+      Scanner sc = new Scanner(System.in);
+      int num1 = sc.nextInt();
+      int num2 = sc.nextInt();
+      if(num1 == num2)
+         System.out.print(num1+" AND "+num2+" ARE EQUAL");
+     else
+         System.out.print(num1+" AND "+num2+" ARE NOT EQUAL");
+    }
+}
+
+
+//write a java program to check the given person age is eligible to vote ore NOT
+import java.util.*;
+class Main{
+    public static void main(String args[]){
+      Scanner sc = new Scanner(System.in);
+      int age = sc.nextInt();
+      if(age>=18)
+         System.out.print("Eligible to vote");
+     else
+         System.out.print(" Not Eligible to vote");
+    }
+}
