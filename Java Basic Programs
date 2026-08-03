@@ -56,16 +56,13 @@ class Main{
     }
 }
 
-//i/p      o/p
-//20       20
-//10       10
+//write a java program to get a float input from user and print one decimal point
 import java.util.*;
 class Main {
     public static void main(String[] args) {
         Scanner obj = new Scanner(System.in);
-        int n = obj.nextInt();
-            System.out.print(n);
+        float f = obj.nextInt();
+            System.out.print(f);
         
     }
 }
-
