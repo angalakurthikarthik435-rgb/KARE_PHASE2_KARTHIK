@@ -65,3 +65,43 @@ class Main
         f.gen2();
     }
 }
+
+
+
+
+
+class Grandfather
+{
+    void gen1()
+    {
+        System.out.println("Money");
+    }
+}
+class Father extends Grandfather
+{
+    void gen2()
+    {
+        System.out.println("Gold");
+    }
+}
+class son extends Father{
+    void gen3()
+    {
+        System.out.println("Diamond");
+    }
+}
+class Main
+{
+    public static void main(String[] args) {
+        son s = new son();
+        s.gen3();
+        s.gen2();
+        s.gen1();
+        Father f = new Father();
+        f.gen1();
+        f.gen2();
+        Grandfather g = new Grandfather();
+        g.gen1();
+        
+    }
+}
