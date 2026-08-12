@@ -37,4 +37,31 @@ class Main {
         m.gen21();
     }
 }
-    
+
+
+
+
+class father
+{
+    void gen2()
+    {
+        System.out.println("Gold");
+    }
+}
+class son extends father
+{
+    void gen3()
+    {
+        System.out.println("Diamond");
+    }
+}
+class Main
+{
+    public static void main(String[] args) {
+        son s = new son();
+        s.gen3();
+        s.gen2();
+        father f = new father();
+        f.gen2();
+    }
+}
