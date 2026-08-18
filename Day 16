@@ -1,0 +1,54 @@
+class Main {
+
+    static class Node {
+        int data;
+        Node prev;
+        Node next;
+
+        Node(int data) {
+            this.data = data;
+        }
+    }
+
+    static Node head = null;
+
+    static void insert(int data) {
+        Node newNode = new Node(data);
+
+        if (head == null) {
+            head = newNode;
+            return;
+        }
+
+        Node temp = head;
+
+        while (temp.next != null) {
+            temp = temp.next;
+        }
+
+        temp.next = newNode;
+        newNode.prev = temp;
+    }
+
+    static int sum() {
+        int total = 0;
+        Node temp = head;
+
+        while (temp != null) {
+            total += temp.data;
+            temp = temp.next;
+        }
+
+        return total;
+    }
+
+    public static void main(String[] args) {
+
+        insert(10);
+        insert(20);
+        insert(30);
+        insert(40);
+
+        System.out.println("Sum = " + sum());
+    }
+}
