@@ -310,3 +310,70 @@ public class Main {
         display();
     }
 }
+
+
+
+
+
+public class Main {
+
+    static class Node {
+        int data;
+        Node next;
+
+        Node(int data) {
+            this.data = data;
+            this.next = null;
+        }
+    }
+
+    static Node head = null;
+
+    static void insert(int data) {
+        Node newNode = new Node(data);
+
+        if (head == null) {
+            head = newNode;
+            newNode.next = head;
+        } else {
+            Node temp = head;
+
+            while (temp.next != head) {
+                temp = temp.next;
+            }
+
+            temp.next = newNode;
+            newNode.next = head;
+        }
+    }
+
+    static int maximum() {
+        if (head == null) {
+            return -1;
+        }
+
+        int max = head.data;
+        Node temp = head.next;
+
+        while (temp != head) {
+            if (temp.data > max) {
+                max = temp.data;
+            }
+
+            temp = temp.next;
+        }
+
+        return max;
+    }
+
+    public static void main(String[] args) {
+
+        insert(40);
+        insert(10);
+        insert(70);
+        insert(20);
+        insert(50);
+
+        System.out.println("Maximum element = " + maximum());
+    }
+}
