@@ -214,3 +214,99 @@ public class Main {
         display();
     }
 }
+
+
+
+
+
+public class Main {
+
+    static class Node {
+        int data;
+        Node next;
+        Node prev;
+
+        Node(int data) {
+            this.data = data;
+            this.next = null;
+            this.prev = null;
+        }
+    }
+
+    static Node head = null;
+
+    static void insert(int data) {
+        Node newNode = new Node(data);
+
+        if (head == null) {
+            head = newNode;
+            newNode.next = head;
+            newNode.prev = head;
+        } else {
+            Node last = head.prev;
+
+            newNode.next = head;
+            newNode.prev = last;
+
+            last.next = newNode;
+            head.prev = newNode;
+        }
+    }
+
+    static void sort() {
+        if (head == null || head.next == head) {
+            return;
+        }
+
+        Node current = head;
+
+        do {
+            Node nextNode = current.next;
+
+            while (nextNode != head) {
+
+                if (current.data > nextNode.data) {
+                    int temp = current.data;
+                    current.data = nextNode.data;
+                    nextNode.data = temp;
+                }
+
+                nextNode = nextNode.next;
+            }
+
+            current = current.next;
+
+        } while (current != head);
+    }
+
+    static void display() {
+        if (head == null) {
+            return;
+        }
+
+        Node temp = head;
+
+        do {
+            System.out.print(temp.data + " ");
+            temp = temp.next;
+        } while (temp != head);
+
+        System.out.println();
+    }
+
+    public static void main(String[] args) {
+
+        insert(40);
+        insert(10);
+        insert(30);
+        insert(20);
+
+        System.out.println("Before sorting:");
+        display();
+
+        sort();
+
+        System.out.println("After sorting:");
+        display();
+    }
+}
