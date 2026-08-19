@@ -1,4 +1,4 @@
-public class Main {
+1.public class Main {
 
     static class Node {
         int data;
@@ -61,7 +61,7 @@ public class Main {
 
 
 
-public class Main {
+2.public class Main {
 
     static class Node {
         int data;
@@ -126,7 +126,7 @@ public class Main {
 
 
 
-public class Main {
+3.public class Main {
 
     static class Node {
         int data;
@@ -219,7 +219,7 @@ public class Main {
 
 
 
-public class Main {
+4.public class Main {
 
     static class Node {
         int data;
@@ -315,7 +315,7 @@ public class Main {
 
 
 
-public class Main {
+5.public class Main {
 
     static class Node {
         int data;
@@ -382,7 +382,7 @@ public class Main {
 
 
 
-public class Main {
+6.public class Main {
 
     static class Node {
         int data;
